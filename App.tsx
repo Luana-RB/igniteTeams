@@ -1,15 +1,11 @@
 import { Groups } from "@screens/Groups";
-import { StyleSheet, Text, View } from "react-native";
+import theme from "src/theme";
+import { ThemeProvider } from "styled-components/native";
 
 export default function App() {
-  return <Groups />;
+  return (
+    <ThemeProvider theme={theme}>
+      <Groups />
+    </ThemeProvider>
+  );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
